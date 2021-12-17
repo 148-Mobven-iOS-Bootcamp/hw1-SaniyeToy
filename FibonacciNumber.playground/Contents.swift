@@ -9,8 +9,8 @@ var loopFibSeries: [Int] = []
 var recursiveFibSeries: [Int] = []
 while loopFibNum < 1000 {
     loopFibNum = loopNumber1 + loopNumber2
-    loopNumber1 = loopNumber2
-    loopNumber2 = loopFibNum
+    loopNumber1 = loopNumber2 // For the next step of the loop the 1st number takes the value of the 2nd number
+    loopNumber2 = loopFibNum// Takes the value of the 2nd number Fibonacci number for the next step of the loop
     if loopFibNum > 750 && loopFibNum < 1000 {
         loopFibSeries.append(loopFibNum)
     }
@@ -26,7 +26,7 @@ func findFibNumber(number1: Int, number2: Int) {
         print("Recursive Result:", recursiveFibSeries)
     }
     if fibnum < 1000 {
-        findFibNumber(number1: number2, number2: fibnum)
+        findFibNumber(number1: number2, number2: fibnum)// For the next step the 1st number takes the value of the 2nd number and takes the value of the 2nd number Fibonacci number for the next step
     }
 }
 
